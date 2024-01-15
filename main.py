@@ -5,7 +5,7 @@ Savchenko Kirill
 import random
 
 # 1
-
+print("FIRST TASK: ")
 numbers = []
 
 for i in range(10):
@@ -74,3 +74,38 @@ for number_r in reverse_numbers:
         break
 index_list = numbers[index_fp + 1: index_lp]
 print(f"sum of numbers between the first and remaining positive elements: {sum(index_list)}")
+
+
+# 2
+
+print("SECOND TASK: ")
+numbers = []
+for i in range(10):
+    numbers.append(random.randint(-10, 10))
+print(numbers)
+
+even = []
+for number in numbers:
+    if number % 2 == 0:
+        even.append(number)
+print(f"even numbers: {even}")
+
+odd = []
+for number in numbers:      # опять же можно было сделать в один цикл
+    if number % 2 != 0:
+        odd.append(number)
+print(f"odd numbers: {odd}")
+
+zero = []
+pos = []
+neg = []
+for number in numbers:
+    if number < 0:
+        neg.append(number)
+    elif number > 0:
+        pos.append(number)
+    else:
+        zero.append(number)
+print(f"positive numbers: {pos}")
+print(f"negative numbers: {neg}")
+print(f"zero: {zero}")
